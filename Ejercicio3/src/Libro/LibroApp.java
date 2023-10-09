@@ -3,8 +3,9 @@ package Libro;
 public class LibroApp {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 
+	//	Libro un_libro = new Libro("123456789", "El primero", )
+		System.out.println("Hola");
 	}
 
 }
