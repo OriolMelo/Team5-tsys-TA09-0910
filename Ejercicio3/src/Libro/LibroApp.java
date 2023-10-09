@@ -6,10 +6,9 @@ public class LibroApp {
 
 		Libro un_libro = new Libro("123456789", "El primero", "Autor", 5);
 		Libro otro_libro = new Libro("987654231", "El otro", "Otro", 10);
-		System.out.println("Hola");
 		
-		un_libro.toString();
-		otro_libro.toString();
+		System.out.println(un_libro.toString());
+		System.out.println(otro_libro.toString());
 	}
 
 }
