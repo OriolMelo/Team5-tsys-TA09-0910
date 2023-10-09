@@ -8,7 +8,9 @@ public class Libro
 		private String Autor;
 		private int num_paginas;
 		
-				
+			
+		
+		
 		public Libro() 
 		{
 			this.ISBN = "";
@@ -18,6 +20,8 @@ public class Libro
 		}
 		
 		
+
+
 		public Libro(String iSBN, String titulo, String autor, int num_paginas) 
 		{
 			this.ISBN = iSBN;
@@ -59,4 +63,5 @@ public class Libro
 		}
 		
 	
+
 }
