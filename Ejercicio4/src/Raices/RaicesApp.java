@@ -1,3 +1,4 @@
+package Raices;
 import java.util.Scanner;
 
 public class RaicesApp {
