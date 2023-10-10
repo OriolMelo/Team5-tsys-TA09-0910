@@ -31,7 +31,7 @@ public class Libro {
 
 	@Override
 	public String toString() {
-		return " El "+ Titulo+" con el ISBN  " + ISBN +  " creado por " + Autor + " tiene " + num_paginas + " paginas. ";
+		return " El libro "+ Titulo+" con el ISBN  " + ISBN +  " creado por " + Autor + " tiene " + num_paginas + " paginas. ";
 	}
 	
 	
