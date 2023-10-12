@@ -42,17 +42,17 @@ public class Television extends Electrodomestico {
 	
 		public double precioFinal() {
 			
-			super.precioFinal();
+			double precio_final=super.precioFinal();
 			
 			if (resolucion >= 40) {
-				this.precio_base += (this.precio_base * 0.3);
+				precio_final += (this.precio_base * 0.3);
 			}
 
 			if (sintonizador == true) {
-				this.precio_base += 50;
+				precio_final += 50;
 			}
 			
-			return precio_base;	 
+			return precio_final;	 
 		}
 
 		
