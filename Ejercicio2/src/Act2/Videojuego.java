@@ -74,7 +74,6 @@ public class Videojuego implements Entregable {
 		return "Videojuego [titulo=" + titulo + ", horasEstimadas=" + horas_estimadas + ", entregado=" + entregado
 				+ ", genero=" + genero + ", companyia=" + companyia + "]";
 	}
-
 	
 	
 	
