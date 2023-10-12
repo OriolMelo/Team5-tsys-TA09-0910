@@ -59,4 +59,16 @@ public class Libro {
 	public void setNum_paginas(int num_paginas) {
 		this.num_paginas = num_paginas;
 	}
+
+	public void comparar(Libro libro) {
+		if(this.num_paginas>libro.num_paginas) {
+			System.out.println("El libro "+ Titulo + " tiene más páginas");
+		}
+		else if(this.num_paginas == libro.num_paginas) {
+			System.out.println("Ambos libros tienen las mismas páginas");
+		}
+		else {
+			System.out.println("El libro "+ libro.Titulo + " tiene más páginass");
+		}
+	}
 }
