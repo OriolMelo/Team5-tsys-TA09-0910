@@ -1,6 +1,6 @@
 package serie;
 
-public class Videojuego 
+public class Videojuego implements Entregable
 {
 
 		protected String titulo;
@@ -74,6 +74,33 @@ public class Videojuego
 		public String toString() {
 			return "Videojuego [titulo=" + titulo + ", horas_estimadas=" + horas_estimadas + ", entregado=" + entregado
 					+ ", genero=" + genero + ", companyia=" + companyia + "]";
+		}
+		
+		
+
+		public boolean entregar() {
+			return true;
+		}
+
+		public boolean devolver() {
+			return false;
+		}
+
+		public boolean isEntregado() {
+
+			return this.entregado;
+		}
+		
+		
+		public boolean compareTo(Object a) {
+
+			boolean esMasLargo = false;
+			
+			if (this.horas_estimadas < ((Videojuego) a).getHoras_estimadas()) {
+				esMasLargo = true;
+			}
+
+			return esMasLargo;
 		}
 
 	
