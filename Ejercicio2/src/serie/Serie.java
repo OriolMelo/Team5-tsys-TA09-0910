@@ -1,6 +1,6 @@
 package serie;
 
-public class Serie 
+public class Serie implements Entregable
 {
 	
 		protected String titulo;
@@ -81,7 +81,30 @@ public class Serie
 		}
 
 		
-	
+		public boolean entregar() {
+			return true;
+		}
+
+		public boolean devolver() {
+			return false;
+		}
+
+		public boolean isEntregado() {
+
+			return this.entregado;
+		}
+		
+		
+		public boolean compareTo(Object a) {
+
+			boolean esMasLargo = false;
+			
+			if (this.num_temporadas < ((Serie) a).getNum_temporadas()) {
+				esMasLargo = true;
+			}
+
+			return esMasLargo;
+		}
 
 	
 
