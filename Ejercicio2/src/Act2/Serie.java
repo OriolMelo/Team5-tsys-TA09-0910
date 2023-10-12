@@ -45,7 +45,6 @@ public class Serie implements Entregable
 			this.titulo = titulo;
 		}
 
-		
 
 		public int getNum_temporadas() {
 			return num_temporadas;
