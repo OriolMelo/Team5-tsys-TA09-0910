@@ -70,8 +70,6 @@ public class Electrodomestico {
 	}
 	
 	public char comprobarConsumoEnergetico(char letra) {
-		//char consumos[]=  new String[]{'A', 'B', 'C', 'D', 'E', 'F'};
-		//boolean valido = false;
 		if(letra < 'A' || letra > 'F'){
 			letra = CONSUMO_BASE;
 		}
@@ -96,7 +94,7 @@ public class Electrodomestico {
 		return color.toLowerCase();
 	}
 	
-	public void precioFinal() {
+	public double precioFinal() {
 		double precio_final = this.precio_base;
 		switch(consumo_energetico) {
 			case 'A':
@@ -132,8 +130,7 @@ public class Electrodomestico {
 		}
 		
 		
-		System.out.println(precio_final);
-	 
+		return precio_final;
 	}
 
 	 public static void main(String[] args) {
