@@ -1,6 +1,4 @@
-package lavadora;
-
-import electrodomestico.Electrodomestico;
+package electrodomestico;
 
 public class Lavadora extends Electrodomestico {
 
