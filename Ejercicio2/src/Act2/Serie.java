@@ -80,12 +80,13 @@ public class Serie implements Entregable
 		}
 
 		
-		public boolean entregar() {
-			return true;
+		public void entregar() {
+			this.entregado =true;
+			
 		}
 
-		public boolean devolver() {
-			return false;
+		public void devolver() {
+			this.entregado = true;
 		}
 
 		public boolean isEntregado() {

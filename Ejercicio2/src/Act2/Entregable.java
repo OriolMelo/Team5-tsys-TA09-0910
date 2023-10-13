@@ -2,9 +2,9 @@ package Act2;
 
 public interface Entregable {
 
-	public boolean entregar();
+	public void entregar();
 
-	public boolean devolver();
+	public void devolver();
 
 	public boolean isEntregado();
 
