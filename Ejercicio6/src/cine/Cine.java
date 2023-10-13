@@ -12,16 +12,35 @@ public class Cine {
 		asientos = new Asiento[filas][columnas];
 		int fila = filas;
 		for(int i=0; i<filas; i--) {
+			//System.out.println(i);
 			for(int j=0; j<columnas; j++) {
+				System.out.println("pos "+j);
 				asientos[i][j] = new Asiento(fila, (char) ('A' + j));
 			}
 			fila--;
 		}
-		
 	}
 	
-	public boolean puede_sentarse(Espectador espectador, Asiento asiento) {
-		return espectador.puede_sentarse(precio_entrada, pelicula.getEdad_minima()) && asiento.esta_libre();
+	public boolean asiento_libre(int fila, int columna) {
+		return asientos[fila][columna].esta_libre();
+	}
+	
+	public boolean puede_sentarse(Espectador espectador, int fila, int columna) {
+		return espectador.puede_sentarse(precio_entrada, pelicula.getEdad_minima()) && asientos[fila][columna].esta_libre();
+	}
+	
+	public void sentarse(int fila, int columna, Espectador espectador) {
+		asientos[fila-1][columna-1].ocupar_asiento(espectador);
+	}
+	
+	public void mostrar_cine() {
+		System.out.println("Pelicula reproducida: "+pelicula);
+		System.out.println("Precio: "+precio_entrada);
+		for(int i=0; i<asientos.length; i++) {
+			for(int j=0; j<asientos[0].length; j++) {
+				asientos[i][j].mostrar_asiento();
+			}
+		}
 	}
 	
 	private Pelicula pelicula;
