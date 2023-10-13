@@ -14,6 +14,10 @@ public class Asiento {
 		ocupado=true;
 	}
 	
+	public boolean esta_libre() {
+		return ocupado;
+	}
+	
 	private int fila;
 	private char columna; 
 	private boolean ocupado;
