@@ -33,7 +33,7 @@ public class Pelicula {
 								"QUE MIEDO", "Triste"};
 	private final int EDAD_MINIMA = 3;
 	private final int EDAD_MAXIMA = 99;
-	private final int DURACION_MINIMA = 3;
-	private final int DURACION_MAXIMA = 99;
+	private final int DURACION_MINIMA = 60;
+	private final int DURACION_MAXIMA = 180;
 
 }
