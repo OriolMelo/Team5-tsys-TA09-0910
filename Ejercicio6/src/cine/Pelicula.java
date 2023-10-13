@@ -19,6 +19,11 @@ public class Pelicula {
 	public int getEdad_minima() {
 		return edad_minima;
 	}
+	
+	public void mostrar_pelicula() {
+		System.out.println("Pelicula reproducida: "+titulo+"\n Duracion: "+duracion+
+				"\n Edad minima: "+edad_minima+"\n Director: "+director);
+	}
 
 	private int generarAleatorio(int min, int max) {
 		return (int)Math.floor(Math.random() * (max - min + 1) + min);
@@ -35,7 +40,7 @@ public class Pelicula {
 	private String[] peliculas = {"La mejor peli", "Peli rara", "Obra maestra", "Empanadilla", 
 								"QUE MIEDO", "Triste"};
 	private final int EDAD_MINIMA = 3;
-	private final int EDAD_MAXIMA = 99;
+	private final int EDAD_MAXIMA = 18;
 	private final int DURACION_MINIMA = 60;
 	private final int DURACION_MAXIMA = 180;
 

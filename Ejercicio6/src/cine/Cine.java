@@ -11,10 +11,10 @@ public class Cine {
 	public void llenar_cine(int filas, int columnas) {
 		asientos = new Asiento[filas][columnas];
 		int fila = filas;
-		for(int i=0; i<filas; i--) {
-			//System.out.println(i);
+		for(int i=0; i<filas; i++) {
+			//System.out.println("pos fila "+i);
 			for(int j=0; j<columnas; j++) {
-				System.out.println("pos "+j);
+				//System.out.println("pos columna "+j);
 				asientos[i][j] = new Asiento(fila, (char) ('A' + j));
 			}
 			fila--;
@@ -30,11 +30,11 @@ public class Cine {
 	}
 	
 	public void sentarse(int fila, int columna, Espectador espectador) {
-		asientos[fila-1][columna-1].ocupar_asiento(espectador);
+		asientos[fila][columna].ocupar_asiento(espectador);
 	}
 	
 	public void mostrar_cine() {
-		System.out.println("Pelicula reproducida: "+pelicula);
+		pelicula.mostrar_pelicula();
 		System.out.println("Precio: "+precio_entrada);
 		for(int i=0; i<asientos.length; i++) {
 			for(int j=0; j<asientos[0].length; j++) {

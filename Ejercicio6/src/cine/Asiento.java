@@ -15,7 +15,7 @@ public class Asiento {
 	}
 	
 	public boolean esta_libre() {
-		return ocupado;
+		return !ocupado;
 	}
 	
 	public void mostrar_asiento() {

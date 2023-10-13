@@ -1,4 +1,5 @@
 package cine;
+import java.util.Random;
 import javax.swing.JOptionPane;
 
 public class CineApp {
@@ -20,16 +21,19 @@ public class CineApp {
 			int fila_espectador = 0;
 			int columna_espectador = 0;
 			do {
+		        Random ran = new Random(); 
 			
-				fila_espectador = (int)Math.floor(Math.random() * ((filas-1) - 0 + 1) + 0);
-				columna_espectador = (int)Math.floor(Math.random() * ((columnas-1) - 0 + 1) + 0);
+				fila_espectador = ran.nextInt(filas);
+				columna_espectador = ran.nextInt(columnas);
+				System.out.println("fila espectador :"+ fila_espectador);
+				System.out.println("columna_espectador :" + columna_espectador);
 				
 			}while(!cine.asiento_libre(fila_espectador, columna_espectador));
 			
 			if(cine.puede_sentarse(esp, fila_espectador, columna_espectador)) {
 				cine.sentarse(fila_espectador, columna_espectador, esp);
 			}
-			
+			espectadores_añadidos++;
 		}
 
 		cine.mostrar_cine();
