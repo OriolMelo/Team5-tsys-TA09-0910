@@ -15,7 +15,10 @@ public class Pelicula {
 		this.edad_minima = edad_minima;
 		this.director = director;
 	}
-
+	
+	public int getEdad_minima() {
+		return edad_minima;
+	}
 
 	private int generarAleatorio(int min, int max) {
 		return (int)Math.floor(Math.random() * (max - min + 1) + min);
