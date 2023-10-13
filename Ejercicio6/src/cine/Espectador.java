@@ -18,6 +18,9 @@ public class Espectador {
 		return (dinero>=precio_entrada && edad>=edad_requerida);
 	}
 	
+	public String mostrar_espectador() {
+		return (nombre+", de edad "+edad+" y con "+dinero+" euros");
+	}
 	
 	private int generarAleatorio(int min, int max) {
 		return (int)Math.floor(Math.random() * (max - min + 1) + min);

@@ -15,7 +15,15 @@ public class Asiento {
 	}
 	
 	public boolean esta_libre() {
-		return ocupado;
+		return !ocupado;
+	}
+	
+	public void mostrar_asiento() {
+		if(ocupado)
+			System.out.println("Asiento "+fila+columna+" continene a "+ espectador.mostrar_espectador());
+		else 
+			System.out.println("Asiento "+fila+columna+" esta vacio");
+
 	}
 	
 	private int fila;
