@@ -6,11 +6,12 @@ public class Profesor extends Persona{
 	
 	private String materia;
 	private boolean disponible;
+	
 
-	public Profesor(String nombre, int edad, char sexo, String materia, boolean asistencia) {
+	public Profesor(String nombre, int edad, char sexo, String materia, boolean disponible) {
 		super(nombre, edad, sexo);
 		this.registroAusencia();
-		this.materia = listaMateria();
+		listaMateria();
 	}
 	
 
@@ -36,12 +37,15 @@ public class Profesor extends Persona{
 		}
 	}
 	
-	public String listaMateria() {
-		String[] materiales =  {"matenaticas", "filosofia", "fisica"};
-		for(int i=0; i<materiales.length; i++) {
-			this.materia =  materiales[i];
+	public void listaMateria() {
+		String[] materias =  {"matematicas", "filosofia", "fisica"};
+		for(int i=0; i<materias.length; i++) {
+			this.materia =  materias[i];
 		}
-		return materia;
+		
+		Random ran = new Random(); 
+
+		this.materia = materias[ran.nextInt(3)];
 	}
 
 
@@ -50,8 +54,8 @@ public class Profesor extends Persona{
 	}
 
 
-	public void setDisponible(boolean asistencia) {
-		this.disponible = asistencia;
+	public void setDisponible(boolean disponible) {
+		this.disponible = disponible;
 	}
 
 }
