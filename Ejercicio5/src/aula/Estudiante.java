@@ -6,7 +6,7 @@ public class Estudiante extends Persona {
 	private int calificacion;
 	private boolean disponible;
 
-	public Estudiante(String nombre, int edad, char sexo, int calificacion) {
+	public Estudiante(String nombre, int edad, char sexo, int calificacion, boolean disponible) {
 		super(nombre, edad, sexo);
 		this.calificacion = calificacion;
 		this.registroAusencia();
