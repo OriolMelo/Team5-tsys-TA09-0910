@@ -12,10 +12,9 @@ public class AulaApp {
 	        Profesor profesor = new Profesor("Hanna", 43, 'F', "filosofia", true);
 	        
 	            Estudiante estudiante = new Estudiante("Marc", 23, 'M', 8, true);
-	            
-	            int calificacionDeEstudiante = estudiante.getCalificacion();
-	            System.out.print(calificacionDeEstudiante);
-	            
+	            Estudiante estudiante2 = new Estudiante("Anna", 23, 'F', 8, true);
+	            estudiantes.add(estudiante);
+	            estudiantes.add(estudiante2);
 	        
 
 	            Aula aula = new Aula(3, 4, "filosofia");
@@ -25,9 +24,9 @@ public class AulaApp {
 	            aula.anadirProfesor(profesor);
 	            
 	            if(aula.isPuedeDarClase()) {
-	            	System.out.print("puede dar clase");
+	            	System.out.print("Puede dar clase \n");
 	            }
-	            else System.out.print("No puede dar clase");
+	            else System.out.print("No puede dar clase \n");
 	        
 	            aula.sacarNotas();
 	}

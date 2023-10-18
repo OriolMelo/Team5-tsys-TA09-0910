@@ -58,7 +58,7 @@ public class Aula {
 	public boolean calcularAsistenciaEstudiantes(){
 		int calcularEstudiantes = 0;
 		for(int i=0; i<estudiantes.size(); i++) {
-			if(estudiante.isDisponible()) {
+			if(estudiantes.get(i).isDisponible()) {
 				calcularEstudiantes++;
 			}
 		}
@@ -75,7 +75,7 @@ public class Aula {
 		for(int i=0; i<estudiantes.size(); i++) {
 			
 			if(estudiantes.get(i).getCalificacion()>=5) {
-				System.out.println("aprobado");
+				//System.out.println("aprobado");
 				if(estudiantes.get(i).getSexo() == 'M') {
 					contadorChicos++;
 				}
@@ -84,15 +84,16 @@ public class Aula {
 				}
 				
 			}
-			else if(estudiantes.get(i).getCalificacion()<5) {
-				System.out.print("No aprobadooo");
-				}
+			/*else if(estudiantes.get(i).getCalificacion()<5) {
+				//System.out.print("No aprobadooo");
+				}*/
 
 		}
-		//System.out.println("Hay " + contadorChicos + " chicos " + " y " + contadorChicas + " chicas " + " Aprobados ");
+		System.out.println("Hay " + contadorChicos + " chicos " + " y " + contadorChicas + " chicas " + " Aprobados ");
 	}
 
 	public boolean isPuedeDarClase() {
+		puedeDarClase();
 		return puedeDarClase;
 	}
 
