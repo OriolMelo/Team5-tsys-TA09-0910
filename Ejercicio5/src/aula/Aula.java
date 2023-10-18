@@ -1,20 +1,23 @@
 package aula;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Aula {
 	private int identificador;
 	private int maximoEstudiante;
 	private String materia;
 	private boolean puedeDarClase;
-	private double notas;
 	
 	private Profesor profesor;
 	private Estudiante estudiante;
-	private Estudiante[] estudiantes;
+    List<Estudiante> estudiantes = new ArrayList<>();
 	
 	public Aula(int identificador, int maximoEstudiante, String materia) {
 		this.identificador = identificador;
 		this.maximoEstudiante = maximoEstudiante;
 		this.materia = materia;
+		
 	}
 	
 	public int getIdentificador() {
@@ -44,14 +47,22 @@ public class Aula {
 
 	}
 	
+	public void anadirEstudiantes(List<Estudiante> estudiantes) {
+		this.estudiantes = estudiantes;
+	}
+	
+	public void anadirProfesor(Profesor profesor) {
+		this.profesor = profesor;
+	}
+	
 	public boolean calcularAsistenciaEstudiantes(){
 		int calcularEstudiantes = 0;
-		for(int i=0; i<estudiantes.length; i++) {
-			if(estudiante.isDisponible()) {
+		for(int i=0; i<estudiantes.size(); i++) {
+			if(estudiantes.get(i).isDisponible()) {
 				calcularEstudiantes++;
 			}
 		}
-		double calcularmetad = estudiantes.length * 0.5;
+		double calcularmetad = estudiantes.size() * 0.5;
 		if(calcularEstudiantes > calcularmetad ) {
 			return true;
 		}
@@ -59,13 +70,30 @@ public class Aula {
 	}
 	
 	public void sacarNotas() {
-		if(isPuedeDarClase() && getNotas() > 5) {
-			System.out.print("aprobado");
+		int contadorChicos = 0;
+		int contadorChicas = 0;
+		for(int i=0; i<estudiantes.size(); i++) {
+			
+			if(estudiantes.get(i).getCalificacion()>=5) {
+				//System.out.println("aprobado");
+				if(estudiantes.get(i).getSexo() == 'M') {
+					contadorChicos++;
+				}
+				else if(estudiantes.get(i).getSexo() == 'F') {
+					contadorChicas++;
+				}
+				
+			}
+			/*else if(estudiantes.get(i).getCalificacion()<5) {
+				//System.out.print("No aprobadooo");
+				}*/
+
 		}
-		else System.out.print("No aprobado");
+		System.out.println("Hay " + contadorChicos + " chicos " + " y " + contadorChicas + " chicas " + " Aprobados ");
 	}
 
 	public boolean isPuedeDarClase() {
+		puedeDarClase();
 		return puedeDarClase;
 	}
 
@@ -74,12 +102,12 @@ public class Aula {
 	}
 	
 
-	public double getNotas() {
-		return notas;
+	/*public double getCalificacion() {
+		return calificacion;
 	}
 
-	public void setNotas(double notas) {
-		this.notas = notas;
-	}
+	public void setCalificacion(double notas) {
+		this.calificacion = notas;
+	}*/
 
 }
